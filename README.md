@@ -43,3 +43,16 @@ Anywhere 自定义规则使用数字类型：
 3, telegram
 0, 1.1.1.0/24
 1, 2606:4700::/32
+```
+## 📝 links.txt
+
+在仓库根目录创建并编辑 `links.txt`，每行定义一个规则源。
+
+### 推荐格式
+
+```txt
+apple,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Apple/Apple_All_No_Resolve.list
+icloud,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/iCloud/iCloud_No_Resolve.list
+google,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Google/Google.list
+ai,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OpenAI/OpenAI.list
+ads,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Advertising/Advertising.list
