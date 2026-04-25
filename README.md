@@ -1,0 +1,2 @@
+# anywhererule
+rule
