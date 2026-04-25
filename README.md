@@ -1,38 +1,45 @@
 # Anywhere Rule Builder
 
-这个仓库用于把多个规则源转换为 Anywhere 可用规则
+自动将公开规则源转换为 [Anywhere](https://github.com/NodePassProject/Anywhere) 可导入的自定义规则格式。
 
-## 输出
+本项目通过 GitHub Actions 定时拉取规则源，自动转换、分类、去重，并输出到 `rule/` 目录，方便在 Anywhere 中通过远程规则使用。
 
-rule/
-- apple.txt
-- ai.txt
-- cn.txt
-- proxy.txt
-- reject.txt
-- all.txt
-- index.json
+---
 
-## links.txt 格式
+## Features
 
-支持：
+- 自动读取 `links.txt` 中的规则源
+- 支持 Surge / Clash 常见规则格式
+- 自动转换为 Anywhere 规则格式
+- 自动分类输出：
+  - Apple
+  - AI
+  - CN
+  - Proxy
+  - Reject
+  - All
+- 自动去重
+- GitHub Actions 每日自动更新
+- 可配合 GitHub Pages 作为远程规则地址使用
 
-apple,https://example.com/apple.list
-apple|https://example.com/apple.list
-apple = https://example.com/apple.list
-https://example.com/apple.list
+---
 
-## Anywhere 规则类型
+## Anywhere Rule Format
 
-0 = IPv4 CIDR  
-1 = IPv6 CIDR  
-2 = 域名后缀  
-3 = 域名关键字  
+Anywhere 自定义规则使用数字类型：
 
-## 建议分流
+| 类型 | 含义 |
+|---|---|
+| `0` | IPv4 CIDR |
+| `1` | IPv6 CIDR |
+| `2` | Domain Suffix |
+| `3` | Domain Keyword |
 
-apple -> DIRECT  
-cn -> DIRECT  
-ai -> PROXY  
-proxy -> PROXY  
-reject -> REJECT  
+示例：
+
+```txt
+2, google.com
+2, openai.com
+3, telegram
+0, 1.1.1.0/24
+1, 2606:4700::/32
