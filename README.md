@@ -58,6 +58,21 @@ ai,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Su
 ads,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Advertising/Advertising.list
 ```
 
+## ⚠️ Limitations
+
+Anywhere 当前不支持以下规则类型：
+
+- GEOIP
+- PROCESS-NAME
+- USER-AGENT
+- URL-REGEX
+- SCRIPT
+- DNS 分流
+
+> 上述规则在转换过程中会被自动忽略。
+
+
+
 ## 🙏 Credits
 
 规则来源及参考项目：
