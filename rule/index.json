@@ -1,0 +1,8 @@
+{
+  "apple": "rule/apple.txt",
+  "ai": "rule/ai.txt",
+  "cn": "rule/cn.txt",
+  "proxy": "rule/proxy.txt",
+  "reject": "rule/reject.txt",
+  "all": "rule/all.txt"
+}
