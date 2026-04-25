@@ -2,7 +2,7 @@
 
 自动将公开规则源转换为 [Anywhere](https://github.com/NodePassProject/Anywhere) 可导入的自定义规则格式。
 
-本项目通过 GitHub Actions 定时拉取规则源，自动转换、分类、去重，并输出到 `rule/` 目录，方便在 Anywhere 中通过远程规则使用。
+本项目通过 GitHub Actions 定时拉取规则源，自动转换、分类、去重，并输出到 `rule/` 目录，方便在 Anywhere 中通过远程规则使用。下述代码全部由 chagpt 完成
 
 ---
 
@@ -56,3 +56,14 @@ icloud,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rul
 google,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Google/Google.list
 ai,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OpenAI/OpenAI.list
 ads,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Advertising/Advertising.list
+```
+
+## 🙏 Credits
+
+规则来源及参考项目：
+
+- https://github.com/blackmatrix7/ios_rule_script
+- https://github.com/MetaCubeX/meta-rules-dat
+- https://github.com/SagerNet/sing-box
+
+感谢以上项目及其维护者对社区的贡献and chagpt。
